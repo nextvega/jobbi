@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicación con Flask y SQLite</title>
+</head>
+<body>
+    <h1>Lista de Procesos</h1>
+    <ul>
+        {% for process in processes %}
+        <li>
+            <strong>ID:</strong> {{ process.id }}<br>
+            <strong>Fecha de ejecución:</strong> {{ process.execution_date }}<br>
+            <strong>Nombre del archivo de resumen:</strong> {{ process.summary_filename }}<br>
+            <strong>Nombre del archivo ETL:</strong> {{ process.etl_filename }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
